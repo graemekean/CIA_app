@@ -2,45 +2,8 @@
 <div class='holder'>
 
 
-<%= form_for @country do |f| %>
-  <%= f.label :name, 'Country name:' %>
-  <%= f.text_field :name %>
-  <br>
-  <br>
-  <%= f.label :flag_image, 'Flag image URL:' %>
-  <%= f.text_field :flag_image %>
-  <br>
-  <br>
-  <%= f.label :size, 'Size in square miles' %>
-  <%= f.number_field :size %>
-  <br>
-  <br>
-  <%= f.label :gdp, 'GDP in billions (US Dollars):' %>
-  <%= f.number_field :gdp %>
-  <br>
-  <br>
-  <%= f.label :population, 'Population:' %>
-  <%= f.number_field :population %>
-  <br>
-  <br>
-  <%= f.label :language, 'Languages:' %>
-  <%= f.text_field :language %>
-  <br>
-  <br>
-  <%= f.label :currency, 'Currency:' %>
-  <%= f.text_field :currency %>
-  <br>
-  <br>
-  <%= f.label :literacy_rate, 'Literacy Rate (%):' %>
-  <%= f.number_field :literacy_rate, in: 1.0..100.0, step: 1.0 %>
-  <br>
-  <br>
-  <%= f.label :governing_party, 'Governing Party:' %>
-  <%= f.text_field :governing_party %>
-  <br>
-  <br>
-  <%= f.submit 'Update Country Details!!' %>
-<% end %>
+<%= render @country %>
+
 
 </div>
 </div>

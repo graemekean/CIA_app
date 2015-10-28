@@ -1,0 +1,12 @@
+
+<div class='container'>
+  <div class='holder'>
+    <% @cities.sort.each do |city| %>
+    
+    <%= link_to(city.name, city_path(city)) %>
+    <%#= button_to('Delete Country', country_path(country), method: :delete, data:{confirm: "Delete country? Are you sure?"}) %>
+    <%#= link_to("Edit Country", edit_country_path(country)) %>
+    <br>
+    <% end %>
+  </div>
+</div>
