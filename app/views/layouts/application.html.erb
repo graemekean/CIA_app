@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CIAApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class='title_bar'>
+<h1>THIS IS THE CIA COUNTRIES DATABASE</h1>
+
+
+  
+</div>
+
+<%= yield %>
+
+
+<footer class='footer'>
+  
+    <%= link_to('All Countries', countries_path) %>  |  <%= link_to('New Country', new_country_path) %>
+  
+</footer>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!-- <body STYLE="background-image: url(<%= @country.flag_image %>)"></body> -->
+
+<div id="bg">
+  <img src="<%= @country.flag_image %>" alt="">
+</div>
+
+<div class='container'>
+<div class='holder'>
+
+<h1><%= @country.name %></h1>
+<%= image_tag(@country.flag_image, alt: "alt text is always required", width:200) %>
+<p><b>Population: </b><%= number_to_human(@country.population) %>.</p>
+<p><b>Size: </b><%= number_to_human(@country.size) %> square miles.</p>
+<p><b>GDP: </b><%= number_to_human(@country.gdp, units: {unit: "Billion", thousand: "Trillion"}) %> dollars US.</p>
+<p><b>Languages: </b><%= @country.language %>.</p>
+<p><b>Currency: </b><%= @country.currency %>.</p>
+<p><b>Literacy Rate: </b><%= @country.literacy_rate %>%</p>
+<p><b>Governing Party: </b><%= @country.governing_party %></p>
+
+<%= button_to('Delete Country', country_path(@country), method: :delete, data:{confirm: "Delete country? Are you sure?"}) %>
+<%= link_to("Edit Country", edit_country_path(@country)) %>
+
+</div>
+
+
+</div>
